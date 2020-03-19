@@ -1,8 +1,8 @@
-@use '../utils/variables'as *;
-@use '../utils/mixins'as *;
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+@use '../base/animations'as *;
 
 .row {
-    background-color: $color-grey;
     max-width: $grid-width;
     margin: 0 auto;
 
@@ -15,7 +15,6 @@
 
 [class^="col-"] {
     float: left;
-    background-color: $color-main;
 
     &:not(:last-child) {
         margin-right: $gutter-horizontal;
