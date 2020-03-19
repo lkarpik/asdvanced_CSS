@@ -1,0 +1,29 @@
+@use '../utils/variables'as *;
+@use '../utils/animations'as *;
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(rgba($color-main-dark, 0.5), rgba($color-main-light, 0.2)), url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+
+    &__logo {
+        height: 3rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        text-align: center;
+    }
+}

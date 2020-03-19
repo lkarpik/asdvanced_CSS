@@ -1,0 +1,33 @@
+@use '../utils/variables'as *;
+@use '../utils/animations'as *;
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    font-family: "Lato", sans-serif;
+    padding: 30px;
+}
+
+.heading-primary {
+    color: $color-white;
+    margin-bottom: 4rem;
+
+    &--main {
+        display: block;
+        text-transform: uppercase;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+        animation: moveInLeft 1s ease-in-out;
+        animation-fill-mode: backwards;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 1.4rem;
+        animation: moveInRight 1s ease-in-out;
+        animation-fill-mode: backwards;
+    }
+}
