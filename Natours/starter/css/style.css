@@ -56,7 +56,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.75;
   font-family: "Lato", sans-serif;
-  padding: 30px;
 }
 
 .heading-primary {
@@ -153,6 +152,10 @@ body {
   left: 50%;
   transform: translate(-50%, -60%);
   text-align: center;
+}
+
+body {
+  padding: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
