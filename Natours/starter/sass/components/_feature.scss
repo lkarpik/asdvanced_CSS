@@ -1,0 +1,30 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
+.feature {
+    text-align: center;
+    background-color: $color-grey-light-1;
+    opacity: .8;
+    padding: 2rem;
+    color: $color-grey;
+    border-radius: 0.5rem;
+    transition: all .4s;
+    box-shadow: $small-box-shadow;
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.03);
+        box-shadow: $medium-box-shadow;
+    }
+
+    &__icon {
+        font-size: 6rem;
+        display: inline-block;
+        @include gradientText;
+    }
+
+    &__heading {}
+
+    &__paragraph {
+        font-size: 1.4rem;
+    }
+}

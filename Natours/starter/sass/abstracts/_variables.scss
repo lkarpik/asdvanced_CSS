@@ -2,13 +2,17 @@ $color-main: #55c57a;
 $color-main-light: #7ed56f;
 $color-main-dark: #28b485;
 $color-white: #fff;
-$color-grey: #777;
 $color-grey-light-1: #f7f7f7;
+$color-grey: #777;
 $color-black: #000;
 
-$grid-width: 120rem;
+$grid-width: 114rem;
 $gutter-vertical: 8rem;
-$gutter-horizontal: 8rem;
+$gutter-horizontal: 6rem;
 
 // FONTS
 $font-size-default: 1.6rem;
+
+// SHADOWS
+$medium-box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+$small-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);

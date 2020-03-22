@@ -1,7 +1,15 @@
+@use '../abstracts/variables'as *;
+
 @mixin clearfix {
     &::after {
         content: "";
         clear: both;
         display: table;
     }
+}
+
+@mixin gradientText {
+    background-image: linear-gradient(to right, rgba($color-main-dark, 0.8), rgba($color-main-light, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
