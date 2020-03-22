@@ -264,6 +264,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.feature__heading {
+  letter-spacing: 0.3rem;
+}
 .feature__paragraph {
   font-size: 1.4rem;
 }
@@ -352,6 +355,10 @@ body {
 }
 .section-features > * {
   transform: skewY(5deg);
+}
+
+.section-tours {
+  padding: 20rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

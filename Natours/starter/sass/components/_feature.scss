@@ -22,7 +22,9 @@
         @include gradientText;
     }
 
-    &__heading {}
+    &__heading {
+        letter-spacing: 0.3rem;
+    }
 
     &__paragraph {
         font-size: 1.4rem;
