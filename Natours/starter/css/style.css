@@ -271,17 +271,55 @@ body {
   font-size: 1.4rem;
 }
 
+.card {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
 .card__side {
-  height: 30rem;
+  height: 50rem;
+  position: relative;
 }
 .card__side--front {
-  background-image: linear-gradient(to right, #ffb900, #ff7730);
+  background-color: #f7f7f7;
 }
 .card__side--back {
-  background-image: linear-gradient(to right, #ffb900, #ff7730);
+  background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
+}
+.card__image {
+  height: 20rem;
+  background-size: cover;
+  background-position: top;
+  background-blend-mode: screen;
+}
+.card__image--1 {
+  background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+.card__heading {
+  position: absolute;
+  top: 15rem;
+  right: 2rem;
+  width: 75%;
+}
+.card__heading-span {
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
 }
 .card__details ul {
+  width: 75%;
   list-style-type: none;
+  padding: 3rem;
+  margin: 0 auto;
+}
+.card__details ul li {
+  padding-top: 1rem;
+  border-bottom: 1px solid #777;
 }
 
 .header {

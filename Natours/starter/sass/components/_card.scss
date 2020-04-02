@@ -2,29 +2,69 @@
 @use '../abstracts/mixins'as *;
 
 .card {
+    // height: 50rem;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
 
     &__side {
-        height: 30rem;
+        height: 50rem;
+        position: relative;
 
         &--front {
-            background-image: linear-gradient(to right, #ffb900, #ff7730);
+            background-color: $color-grey-light-1;
         }
 
         &--back {
-            background-image: linear-gradient(to right, #ffb900, #ff7730);
+            background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
         }
     }
 
     &__image {
+        height: 20rem;
+        background-size: cover;
+        background-position: top;
+        background-blend-mode: screen;
 
-        &--1 {}
+
+        &--1 {
+            background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+        }
     }
 
-    &__heading {}
+    &__heading {
+        position: absolute;
+        top: 15rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        font-size: $font-size-header-4;
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+        }
+    }
+
 
     &__details {
+
+
         & ul {
+            width: 75%;
             list-style-type: none;
+            padding: 3rem;
+            margin: 0 auto;
+
+            & li {
+                padding-top: 1rem;
+                border-bottom: 1px solid $color-grey;
+            }
         }
     }
 
