@@ -271,6 +271,19 @@ body {
   font-size: 1.4rem;
 }
 
+.card__side {
+  height: 30rem;
+}
+.card__side--front {
+  background-image: linear-gradient(to right, #ffb900, #ff7730);
+}
+.card__side--back {
+  background-image: linear-gradient(to right, #ffb900, #ff7730);
+}
+.card__details ul {
+  list-style-type: none;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(rgba(40, 180, 133, 0.5), rgba(126, 213, 111, 0.2)), url(../img/hero.jpg);

@@ -1,0 +1,32 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
+.card {
+
+    &__side {
+        height: 30rem;
+
+        &--front {
+            background-image: linear-gradient(to right, #ffb900, #ff7730);
+        }
+
+        &--back {
+            background-image: linear-gradient(to right, #ffb900, #ff7730);
+        }
+    }
+
+    &__image {
+
+        &--1 {}
+    }
+
+    &__heading {}
+
+    &__details {
+        & ul {
+            list-style-type: none;
+        }
+    }
+
+
+}
