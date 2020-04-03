@@ -183,6 +183,16 @@ body {
 .btn--white::after {
   background-color: #fff;
 }
+.btn--primary {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--primary:hover {
+  color: #fff;
+}
+.btn--primary::after {
+  background-color: #55c57a;
+}
 .btn--animated {
   animation: moveInDown 1s 1s ease-out;
   animation-fill-mode: backwards;
@@ -272,20 +282,39 @@ body {
 }
 
 .card {
-  width: 80%;
+  height: 50rem;
+  width: 100%;
   margin: 0 auto;
   border-radius: 5px 5px 0 0;
-  overflow: hidden;
+  position: relative;
+  perspective: 150rem;
 }
 .card__side {
   height: 50rem;
-  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease;
+  backface-visibility: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 .card__side--front {
-  background-color: #f7f7f7;
+  background-color: #fff;
+  color: #777;
 }
 .card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
   background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
+}
+.card__side--back-3 {
+  background-image: linear-gradient(to bottom right, #2998ff, #5643fa);
 }
 .card__image {
   height: 20rem;
@@ -296,6 +325,12 @@ body {
 .card__image--1 {
   background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(../img/nat-5.jpg);
 }
+.card__image--2 {
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(../img/nat-6.jpg);
+}
+.card__image--3 {
+  background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(../img/nat-7.jpg);
+}
 .card__heading {
   position: absolute;
   top: 15rem;
@@ -304,6 +339,8 @@ body {
 }
 .card__heading-span {
   font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
   padding: 1rem 1.5rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -311,15 +348,44 @@ body {
 .card__heading-span--1 {
   background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
 }
+.card__heading-span--2 {
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to bottom right, #2998ff, #5643fa);
+}
 .card__details ul {
   width: 75%;
   list-style-type: none;
   padding: 3rem;
   margin: 0 auto;
+  line-height: 2.5;
 }
-.card__details ul li {
-  padding-top: 1rem;
-  border-bottom: 1px solid #777;
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+}
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__price-box {
+  color: #fff;
+}
+.card__text {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.card__price {
+  font-size: 6rem;
+  font-weight: 100;
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
 }
 
 .header {
@@ -393,7 +459,7 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 20rem 0;
-  margin-top: -15vh;
+  margin-top: -10rem;
 }
 
 .section-features {
@@ -410,6 +476,8 @@ body {
 
 .section-tours {
   padding: 20rem 0;
+  background-color: #f7f7f7;
+  margin-top: -10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

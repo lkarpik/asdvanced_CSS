@@ -56,6 +56,19 @@
         }
     }
 
+    &--primary {
+        background-color: $color-main;
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &::after {
+            background-color: $color-main;
+        }
+    }
+
     &--animated {
         animation: moveInDown 1s 1s ease-out;
         animation-fill-mode: backwards;

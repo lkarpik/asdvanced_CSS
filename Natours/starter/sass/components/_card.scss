@@ -2,22 +2,43 @@
 @use '../abstracts/mixins'as *;
 
 .card {
-    // height: 50rem;
-    width: 80%;
+    height: 50rem;
+    width: 100%;
     margin: 0 auto;
     border-radius: 5px 5px 0 0;
-    overflow: hidden;
+    position: relative;
+    perspective: 150rem;
 
     &__side {
         height: 50rem;
-        position: relative;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.7s ease;
+        backface-visibility: hidden;
+        box-shadow: $medium-box-shadow;
+        overflow: hidden;
 
         &--front {
-            background-color: $color-grey-light-1;
+            background-color: $color-white;
+            color: $color-grey;
         }
 
         &--back {
-            background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to bottom right, $color-main-light, $color-main-dark);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
+            }
         }
     }
 
@@ -31,6 +52,14 @@
         &--1 {
             background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
         }
+
+        &--2 {
+            background-image: linear-gradient(to bottom right, $color-main-light, $color-main-dark), url(../img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+        }
     }
 
     &__heading {
@@ -42,6 +71,8 @@
 
     &__heading-span {
         font-size: $font-size-header-4;
+        color: $color-white;
+        text-transform: uppercase;
         padding: 1rem 1.5rem;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
@@ -49,24 +80,59 @@
         &--1 {
             background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
         }
+
+        &--2 {
+            background-image: linear-gradient(to bottom right, $color-main-light, $color-main-dark);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
+        }
     }
 
 
     &__details {
-
 
         & ul {
             width: 75%;
             list-style-type: none;
             padding: 3rem;
             margin: 0 auto;
+            line-height: 2.5;
 
-            & li {
-                padding-top: 1rem;
-                border-bottom: 1px solid $color-grey;
+            & li:not(:last-child) {
+                border-bottom: 1px solid rgba($color-grey, 0.2);
             }
         }
     }
 
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__price-box {
+        color: $color-white;
+    }
+
+    &__text {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
 
 }
