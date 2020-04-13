@@ -24,3 +24,10 @@ $font-size-header-4: 2.0rem;
 // SHADOWS
 $medium-box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
 $small-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+
+// BREAKPOINTS
+$phone: 600px;
+$tablet: 900px;
+$tablet-wide: 1200px;
+// 1200-1800 - default range
+$desktop-large: 1800px;

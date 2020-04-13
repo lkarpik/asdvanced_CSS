@@ -20,3 +20,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin respond-min($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin respond-max($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}

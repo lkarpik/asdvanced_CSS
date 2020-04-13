@@ -1,3 +1,6 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
 *,
 *::after,
 *::before {
@@ -7,10 +10,26 @@
 }
 
 html {
-    font-size: 62.5%;
-}
+    font-size: 62.5%; // 1rem=10px
 
-body {
-    box-sizing: border-box;
-    padding: 30px;
+    @include respond-max($tablet-wide) {
+        font-size: 56.25%; // 1rem=9px
+    }
+
+    @include respond-max($tablet) {
+        font-size: 50%; // 1rem=8px
+    }
+
+    @include respond-min($desktop-large) {
+        font-size: 75%; // 1rem=12px
+    }
+
+    body {
+        box-sizing: border-box;
+        padding: 30px;
+
+        @include respond-max($tablet) {
+            padding: 0;
+        }
+    }
 }
