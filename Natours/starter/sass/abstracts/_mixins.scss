@@ -22,13 +22,13 @@
 }
 
 @mixin respond-min($breakpoint) {
-    @media (min-width: $breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
         @content;
     }
 }
 
 @mixin respond-max($breakpoint) {
-    @media (max-width: $breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
         @content;
     }
 }

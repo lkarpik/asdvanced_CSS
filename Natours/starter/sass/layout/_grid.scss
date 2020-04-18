@@ -11,15 +11,27 @@
     }
 
     @include clearfix;
-}
 
-[class^="col-"] {
-    float: left;
+    & [class^="col-"] {
+        float: left;
 
-    &:not(:last-child) {
-        margin-right: $gutter-horizontal;
+        @include respond-max($tablet) {
+            float: none;
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+
+            @include respond-max($tablet) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
     }
 }
+
+
 
 .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal})/2);

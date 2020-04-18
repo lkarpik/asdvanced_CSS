@@ -96,7 +96,7 @@
         & ul {
             width: 75%;
             list-style-type: none;
-            padding: 3rem;
+            padding: 5rem 3rem;
             margin: 0 auto;
             line-height: 2.5;
 
@@ -134,6 +134,50 @@
 
     &:hover &__side--back {
         transform: rotateY(0deg);
+    }
+
+    @media only screen and (max-width: $tablet),
+    only screen and (hover: none) {
+
+        width: 85%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 5px 5px 0 0;
+        position: relative;
+        perspective: none;
+
+        &__side {
+            height: auto;
+            width: 100%;
+            position: relative;
+            box-shadow: $small-box-shadow;
+            overflow: hidden;
+
+            &--back {
+                transform: rotateY(0deg);
+            }
+        }
+
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(-0%, -0%);
+            width: 100%;
+            padding: 4rem;
+        }
+
+        &__price {
+            font-size: 4rem;
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(-0deg);
+        }
+
+        &:hover &__side--back {
+            transform: rotateY(0deg);
+        }
     }
 
 }

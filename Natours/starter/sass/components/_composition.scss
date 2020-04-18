@@ -1,7 +1,14 @@
 @use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
 
 .composition {
     position: relative;
+    text-align: center;
+
+    @include respond-max($tablet) {
+        margin-top: 3rem;
+    }
+
 
     &__photo {
         width: 55%;
@@ -11,23 +18,46 @@
         box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
         transition: all .2s;
 
+        @include respond-max($tablet) {
+            margin: 0 auto;
+            position: relative;
+            width: 45%;
+        }
+
+
         &--1 {
             top: -2rem;
             left: 0;
+
+            @include respond-max($tablet) {
+                top: 1rem;
+                transform: scale(1.2);
+            }
         }
 
         &--2 {
             top: 2rem;
             right: 0;
+
+            @include respond-max($tablet) {
+                top: 2rem;
+                transform: scale(1.2);
+            }
         }
 
         &--3 {
             top: 10rem;
             left: 20%;
+
+            @include respond-max($tablet) {
+                top: 1rem;
+                left: 0;
+                transform: scale(1.2);
+            }
         }
 
         &:hover {
-            z-index: 2;
+            z-index: 3;
             outline: solid .75rem $color-main;
             outline-offset: 1rem;
             transform: scale(1.1) translateY(-.1rem);
@@ -37,5 +67,11 @@
 
     &:hover &__photo:not(:hover) {
         transform: scale(.9);
+    }
+
+    @include respond-max($tablet) {
+        &:hover &__photo:not(:hover) {
+            transform: scale(1);
+        }
     }
 }

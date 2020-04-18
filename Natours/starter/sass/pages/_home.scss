@@ -5,6 +5,11 @@
     background-color: $color-grey-light-1;
     padding: 20rem 0;
     margin-top: -10rem;
+
+    @include respond-max($phone) {
+        padding: 15rem 0;
+    }
+
 }
 
 .section-features {
@@ -14,6 +19,10 @@
     padding: 20rem 0;
     transform: skewY(-5deg);
     margin-top: -6rem;
+
+    @include respond-max($phone) {
+        padding: 10rem 0;
+    }
 
     &>* {
         transform: skewY(5deg);
@@ -25,25 +34,46 @@
     padding-bottom: 10rem;
     background-color: $color-grey-light-1;
     margin-top: -10rem;
+
+    @include respond-max($phone) {
+        padding-top: 15rem;
+    }
 }
 
 .section-stories {
     position: relative;
     padding: 15rem 0;
+
+    @include respond-max($phone) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
     padding: 15rem 0;
     background-image: linear-gradient(to bottom right, $color-main-light, $color-main-dark);
+
+    @include respond-max($phone) {
+        padding: 10rem 0;
+    }
 }
 
 .book {
     width: 100%;
-    background-image: linear-gradient(110deg, rgba($color-white, .9) 50%, transparent 50%), url(../img/nat-10.jpg);
-    background-size: 100%;
+    background-image: linear-gradient(110deg, rgba($color-white, .8) 50%, transparent 50%), url(../img/nat-10.jpg);
+    background-size: cover;
     background-position: center;
+
+    @include respond-max($tablet) {
+        background-image: linear-gradient(110deg, rgba($color-white, .8) 100%, transparent 0%), url(../img/nat-10.jpg);
+    }
 
     &__form {
         width: 50%;
+
+        @include respond-max($tablet) {
+            text-align: center;
+            width: 100%;
+        }
     }
 }

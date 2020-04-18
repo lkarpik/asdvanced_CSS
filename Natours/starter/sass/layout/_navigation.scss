@@ -19,6 +19,11 @@
         border-radius: 50%;
         text-align: center;
         cursor: pointer;
+
+        @include respond-max($phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -31,6 +36,11 @@
         height: 3rem;
         z-index: 99;
         transition: all 0.4s;
+
+        @include respond-max($phone) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
     }
 
     &__nav {
@@ -53,6 +63,10 @@
         transition: all 0.4s;
         width: 30%;
         list-style: none;
+
+        @include respond-max($phone) {
+            width: 70%;
+        }
     }
 
     &__item {

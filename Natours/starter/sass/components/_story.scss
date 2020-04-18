@@ -10,6 +10,17 @@
     box-shadow: $medium-box-shadow;
     transform: skewX(-7deg);
     border-radius: none;
+    overflow: hidden;
+
+
+    @include respond-max($tablet) {
+        width: 100%;
+    }
+
+    @include respond-max($phone) {
+        width: 100%;
+        transform: skewX(0deg);
+    }
 
     &__figure {
         position: relative;
@@ -22,6 +33,10 @@
         shape-outside: circle(50%);
         -webkit-shape-outside: circle(50%);
         transform: translateX(-3rem) skewX(7deg);
+
+        @include respond-max($phone) {
+            transform: translateX(-3rem) skewX(0deg);
+        }
     }
 
     &__img {
@@ -47,7 +62,9 @@
     }
 
     &__text {
-        transform: skewX(7deg);
+        @include respond-max($tablet) {
+            transform: skewX(0deg);
+        }
     }
 
     &:hover &__img {

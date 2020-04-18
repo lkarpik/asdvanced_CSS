@@ -10,6 +10,7 @@
     border-radius: 0.5rem;
     transition: all .4s;
     box-shadow: $small-box-shadow;
+    overflow: hidden;
 
     &:hover {
         transform: translateY(-1rem) scale(1.03);

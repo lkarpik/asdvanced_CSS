@@ -14,6 +14,7 @@
     transition: all 0.4s;
 
     &__content {
+        min-height: 75vh;
         width: 75%;
         height: 75%;
         background: $color-white;
@@ -23,12 +24,23 @@
         transform: translate(-50%, -50%) scale(0.25);
         opacity: 0;
         transition: all 0.4s;
+        overflow: hidden;
+
+        @include respond-max($tablet) {
+            overflow: auto;
+        }
     }
 
     &__left {
         width: 33%;
         height: 100%;
         float: left;
+
+        @include respond-max($tablet) {
+            width: 100%;
+            height: auto;
+        }
+
     }
 
     &__img {
@@ -36,6 +48,11 @@
         width: 100%;
         display: block;
         object-fit: cover;
+
+        @include respond-max($tablet) {
+            width: 50%;
+            display: inline-block;
+        }
     }
 
     &__right {
@@ -44,7 +61,13 @@
         height: 100%;
         float: left;
         @include clearfix;
-        overflow: hidden;
+        overflow: auto;
+
+        @include respond-max($tablet) {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
     }
 
     &__close {
@@ -68,6 +91,13 @@
         width: 100%;
         padding: 3rem 3rem;
 
+        @include respond-max($tablet) {
+            position: static;
+            top: 0%;
+            left: 0%;
+            transform: translate(0%, 0%);
+            text-align: center;
+        }
     }
 
     &__text {
@@ -80,6 +110,14 @@
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         margin-bottom: 4rem;
+
+        @include respond-max($tablet) {
+            width: 100%;
+            height: auto;
+            column-count: 1;
+            column-gap: 0;
+            column-rule: none;
+        }
     }
 
     // Acitve state
