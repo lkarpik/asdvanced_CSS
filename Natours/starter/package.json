@@ -5,10 +5,24 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0",
+    "postcss-cli": "^7.1.0",
     "sass": "^1.26.3"
   },
   "scripts": {
-    "compile": "sass sass/main.scss css/style.css --watch"
+    "watch:scss": "sass sass/main.scss:css/style.css --watch",
+    "live": "browser-sync -s -w",
+    "start": "npm-run-all --parallel live watch:scss",
+
+    "compile:scss": "sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icons-fonts.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css --style=compressed",
+    "build": "npm-run-all compile:scss concat:css prefix:css compress:css"
   },
   "keywords": [],
   "author": "",
