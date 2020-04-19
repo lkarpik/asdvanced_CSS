@@ -19,11 +19,11 @@
 
     &:hover {
         transform: translateY(-0.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
         &::after {
             opacity: 0;
-            transform: scaleX(1.5) scaleY(1.2);
+            transform: scaleX(1.5) scaleY(1.6);
         }
     }
 
